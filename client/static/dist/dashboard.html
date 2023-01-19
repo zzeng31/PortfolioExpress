@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/scss/style.css" />
+    <title>PortfolioExpress</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <a class="logo-container" href="/dist/index.html">
+        <img src="/img/logo.png" class="logo" alt="logo" />
+      </a>
+
+      <ul class="navbar-list">
+        <li>
+          <a class="navbar-link" href="/dist/developers.html">Developers</a>
+        </li>
+        <li>
+          <a class="navbar-link" href="/dist/posts.html">Posts</a>
+        </li>
+        <li>
+          <a class="navbar-link" href="/dist/index.html">Logout</a>
+        </li>
+      </ul>
+      <div class="mobile-menu icon">
+        <ion-icon name="menu-outline"></ion-icon>
+      </div>
+    </header>
+    <main>
+      <section class="section-container">
+        <div class="profile">
+          <!-- Top -->
+          <div class="profile-top">
+            <img
+              src="/img/avatar.png"
+              alt="dev avatar"
+              class="profile-avatar round-icon"
+            />
+            <div class="profile-top-info">
+              <p class="dashboard-welcome title-mini">Welcome back, Senpai</p>
+              <h1 class="profile-name">Senpai</h1>
+              <p class="profile-job">
+                <ion-icon name="briefcase-outline" class="icon"></ion-icon
+                >Developer at Microsoft
+              </p>
+              <p class="profile-location">
+                <ion-icon name="location-outline" class="icon"></ion-icon
+                >Seattle, WA
+              </p>
+              <div class="profile-social">
+                <a href="#">
+                  <ion-icon
+                    name="globe-outline"
+                    class="social-icon icon"
+                  ></ion-icon>
+                </a>
+                <a href="#">
+                  <ion-icon
+                    name="logo-instagram"
+                    class="social-icon icon"
+                  ></ion-icon
+                ></a>
+                <a href="#">
+                  <ion-icon
+                    name="logo-facebook"
+                    class="social-icon icon"
+                  ></ion-icon
+                ></a>
+                <a href="#">
+                  <ion-icon
+                    name="logo-twitter"
+                    class="social-icon icon"
+                  ></ion-icon
+                ></a>
+                <a href="#">
+                  <ion-icon
+                    name="logo-youtube"
+                    class="social-icon icon"
+                  ></ion-icon
+                ></a>
+              </div>
+            </div>
+            <button class="btn btn-light profile-edit-btn">
+              <ion-icon
+                name="settings-outline"
+                class="setting-icon icon"
+              ></ion-icon
+              >Edit Your portfolio
+            </button>
+          </div>
+
+          <div class="profile-about">
+            <!-- Bio -->
+            <div class="profile-bio-container box-shadow">
+              <p class="profile-bio-title title-tertiary">Senpai's Bio</p>
+              <p class="profile-bio">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab
+                facilis ad fuga et reprehenderit, tempore recusandae optio ut.
+                Optio, obcaecati.
+              </p>
+            </div>
+            <div class="divider"></div>
+            <!-- Skill -->
+            <div class="profile-skill-container box-shadow">
+              <p class="profile-skill-title title-tertiary">Skills</p>
+              <div class="profile-skills">
+                <ul class="profile-skill-list">
+                  <li>
+                    <ion-icon name="checkmark-outline" class="icon"></ion-icon
+                    >HTML
+                  </li>
+                  <li>
+                    <ion-icon name="checkmark-outline" class="icon"></ion-icon
+                    >Javascript
+                  </li>
+                  <li>
+                    <ion-icon name="checkmark-outline" class="icon"></ion-icon
+                    >CSS
+                  </li>
+                  <li>
+                    <ion-icon name="checkmark-outline" class="icon"></ion-icon
+                    >React
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Experience -->
+            <div class="profile-exp-container box-shadow">
+              <p class="profile-exp-title title-tertiary">Experience</p>
+              <div class="profile-exp">
+                <p class="profile-exp-company title-mini">Microsoft</p>
+                <p class="profile-exp-work-date">Oct 2022 - Current</p>
+                <p class="profile-exp-position">
+                  <strong class="profile-mini-title">Position:</strong> Senior
+                  Developer
+                </p>
+                <p class="profile-exp-description">
+                  <strong class="profile-mini-title">Description:</strong>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Aperiam eligendi nobis iusto laboriosam? Eaque laudantium est
+                  quae enim vero in!
+                </p>
+              </div>
+              <div class="profile-exp">
+                <p class="profile-exp-company title-mini">Sun Micruosystems</p>
+                <p class="profile-exp-work-date">Oct 2002 - 2010</p>
+                <p class="profile-exp-position">
+                  <strong class="profile-mini-title">Position:</strong> Systems
+                  Adminstrastor
+                </p>
+                <p class="profile-exp-description">
+                  <strong class="profile-mini-title">Description:</strong>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Aperiam eligendi nobis iusto laboriosam? Eaque laudantium est
+                  quae enim vero in!
+                </p>
+              </div>
+            </div>
+            <!-- Education -->
+            <div class="profile-edu-container box-shadow">
+              <p class="profile-edu-title title-tertiary">Education</p>
+              <div class="profile-edu">
+                <p class="profile-edu-school">University of Tokyo</p>
+                <p class="profile-edu-time">Sep 1993 - June 1999</p>
+                <p class="profile-edu-degree">
+                  <strong class="profile-mini-title">Degree:</strong>Masters
+                </p>
+                <p class="profile-edu-field">
+                  <strong class="profile-mini-title">Field of Study:</strong
+                  >Computer Science
+                </p>
+                <p class="profile-edu-description">
+                  <strong class="profile-mini-title">Description:</strong>Lorem
+                  ipsum dolor sit amet consectetur, adipisicing elit. Ex,
+                  veniam?
+                </p>
+              </div>
+            </div>
+            <!-- Github Repos -->
+            <div class="profile-github-container">
+              <p class="profile-github-title title-tertiary">
+                <ion-icon
+                  name="logo-github"
+                  class="profile-github-icon"
+                ></ion-icon
+                >Github Repos
+              </p>
+              <div class="profile-github-repos">
+                <div class="profile-github-repo box-shadow">
+                  <a href="#" class="profile-github-repo-title">
+                    <ion-icon name="logo-github" class="icon"></ion-icon>Repo
+                    1</a
+                  >
+
+                  <p class="profile-github-repo-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Distinctio, possimus!
+                  </p>
+                  <div class="profile-github-repo-badge">
+                    <ul class="profile-github-repo-badge-list">
+                      <li>
+                        <ion-icon name="star-outline" class="icon"></ion-icon
+                        >Stars: 44
+                      </li>
+                      <li>
+                        <ion-icon name="eye-outline" class="icon"></ion-icon
+                        >Watchers: 20
+                      </li>
+                      <li>
+                        <ion-icon
+                          name="share-social-outline"
+                          class="icon"
+                        ></ion-icon
+                        >Forks: 25
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="profile-github-repo box-shadow">
+                  <a href="#" class="profile-github-repo-title">
+                    <ion-icon name="logo-github" class="icon"></ion-icon>Repo
+                    2</a
+                  >
+
+                  <p class="profile-github-repo-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Distinctio, possimus!
+                  </p>
+                  <div class="profile-github-repo-badge">
+                    <ul class="profile-github-repo-badge-list">
+                      <li>
+                        <ion-icon name="star-outline" class="icon"></ion-icon
+                        >Stars: 44
+                      </li>
+                      <li>
+                        <ion-icon name="eye-outline" class="icon"></ion-icon
+                        >Watchers: 20
+                      </li>
+                      <li>
+                        <ion-icon
+                          name="share-social-outline"
+                          class="icon"
+                        ></ion-icon
+                        >Forks: 25
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="profile-github-repo box-shadow">
+                  <a href="#" class="profile-github-repo-title">
+                    <ion-icon name="logo-github" class="icon"></ion-icon>Repo
+                    3</a
+                  >
+
+                  <p class="profile-github-repo-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Distinctio, possimus!
+                  </p>
+                  <div class="profile-github-repo-badge">
+                    <ul class="profile-github-repo-badge-list">
+                      <li>
+                        <ion-icon name="star-outline" class="icon"></ion-icon
+                        >Stars: 44
+                      </li>
+                      <li>
+                        <ion-icon name="eye-outline" class="icon"></ion-icon
+                        >Watchers: 20
+                      </li>
+                      <li>
+                        <ion-icon
+                          name="share-social-outline"
+                          class="icon"
+                        ></ion-icon
+                        >Forks: 25
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

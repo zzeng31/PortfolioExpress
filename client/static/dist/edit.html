@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/scss/style.css" />
+    <title>PortfolioExpress</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <a class="logo-container" href="/dist/index.html">
+        <img src="/img/logo.png" class="logo" alt="logo" />
+      </a>
+
+      <ul class="navbar-list">
+        <li>
+          <a class="navbar-link" href="developers.html">Developers</a>
+        </li>
+        <li>
+          <a class="navbar-link" href="/dist/dashboard.html">Dashboard</a>
+        </li>
+        <li>
+          <a class="navbar-link" href="/dist/post.html">Post</a>
+        </li>
+      </ul>
+      <div class="mobile-menu icon">
+        <ion-icon name="menu-outline"></ion-icon>
+      </div>
+    </header>
+    <main>
+      <section class="section-container">
+        <form class="edit-form">
+          <p class="edit-form-title title-primary">Edit Your Portfolio</p>
+          <div class="edit-form-container box-shadow">
+            <p class="edit-form-title">Bio</p>
+
+            <label class="edit-input-label">
+              Tell us a bit about yourself</label
+            >
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="Bio"
+            />
+          </div>
+          <div class="edit-form-container box-shadow">
+            <p class="edit-form-title">Brief</p>
+
+            <label class="edit-input-label">
+              Give us an idea of where you are in your career</label
+            >
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="Professional Status"
+            />
+            <label class="edit-input-label"
+              >Could be your company or where you work for</label
+            >
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="Company"
+            />
+            <label class="edit-input-label">Where are you at?</label>
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="Location"
+            />
+          </div>
+          <div class="edit-form-container box-shadow">
+            <p class="edit-form-title">Experience</p>
+
+            <label class="edit-input-label"
+              >Could be your company or where you work for
+            </label>
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="Company"
+            />
+            <label class="edit-input-label"> What is your position</label>
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="Position"
+            />
+            <label class="edit-input-label"> Description</label>
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="Description"
+            />
+            <div class="edit-date-container">
+              <label class="edit-input-label">Start date:</label>
+
+              <input
+                type="date"
+                class="edit-form-date"
+                value="2018-07-22"
+                min="2018-01-01"
+                max="2018-12-31"
+              />
+              <label class="edit-input-label">End date:</label>
+
+              <input
+                type="date"
+                class="edit-form-date"
+                value="2018-07-22"
+                min="2018-01-01"
+                max="2018-12-31"
+              />
+            </div>
+
+            <span class="edit-add-btn">
+              <ion-icon name="add-circle-outline" class="icon"></ion-icon>
+              Add more Experience
+            </span>
+          </div>
+          <div class="edit-form-container box-shadow">
+            <p class="edit-form-title">Skill</p>
+            <label class="edit-input-label"
+              >List any skills that you have
+            </label>
+
+            <div class="edit-skills">
+              <div class="edit-skill tag">HTML</div>
+              <div class="edit-skill tag">CSS</div>
+              <div class="edit-skill tag">Javascipt</div>
+              <div class="edit-add-btn">
+                <ion-icon name="add-circle-outline" class="icon"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <div class="edit-form-container box-shadow">
+            <p class="edit-form-title">Education</p>
+
+            <label class="edit-input-label">What is the name of school?</label>
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="School"
+            />
+            <label class="edit-input-label"> What is your Degree?</label>
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="Degree"
+            />
+            <label class="edit-input-label">
+              What is your Field of Study?</label
+            >
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="Field of Study"
+            />
+            <label class="edit-input-label"> Description:</label>
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="Description"
+            />
+            <div class="edit-date-container">
+              <label class="edit-input-label">Start date:</label>
+
+              <input
+                type="date"
+                class="edit-form-date"
+                value="2018-07-22"
+                min="2018-01-01"
+                max="2018-12-31"
+              />
+              <label class="edit-input-label">End date:</label>
+
+              <input
+                type="date"
+                class="edit-form-date"
+                value="2018-07-22"
+                min="2018-01-01"
+                max="2018-12-31"
+              />
+            </div>
+
+            <span class="edit-add-btn">
+              <ion-icon name="add-circle-outline" class="icon"></ion-icon>
+              Add more Education
+            </span>
+          </div>
+
+          <div class="edit-form-container box-shadow">
+            <p class="edit-form-title">Social Network</p>
+
+            <label class="edit-input-label"
+              ><ion-icon name="logo-twitter" class="edit-social-icon"></ion-icon
+            ></label>
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="Twitter Url"
+            />
+            <label class="edit-input-label"
+              ><ion-icon name="logo-youtube" class="edit-social-icon"></ion-icon
+            ></label>
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="Youtube Url"
+            />
+            <label class="edit-input-label"
+              ><ion-icon
+                name="logo-facebook"
+                class="edit-social-icon"
+              ></ion-icon
+            ></label>
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="Facebook URL"
+            />
+            <label class="edit-input-label"
+              ><ion-icon
+                name="logo-instagram"
+                class="edit-social-icon"
+              ></ion-icon
+            ></label>
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="Instagram URL"
+            />
+            <label class="edit-input-label"
+              ><ion-icon
+                name="logo-linkedin"
+                class="edit-social-icon"
+              ></ion-icon
+            ></label>
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="Linkedin URL"
+            />
+            <label class="edit-input-label"
+              ><ion-icon name="logo-github" class="edit-social-icon"></ion-icon
+            ></label>
+            <input
+              type="text"
+              class="edit-form-input input"
+              placeholder="Github Username"
+            />
+          </div>
+          <div class="edit-btn-container">
+            <button class="btn btn-primary edit-apply-btn">
+              Apply Changes
+            </button>
+            <button class="btn btn-light edit-return-btn">Go Back</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

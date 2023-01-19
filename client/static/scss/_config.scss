@@ -1,0 +1,60 @@
+// -  Primary Color
+$primary-color: #e67e22;
+// - Message Color
+$success-color: #8ce99a;
+$error-color: #ff8787;
+// - Tints:
+$tints-color-light: #fdf2e9;
+$tints-color-medium: #fae5d3;
+$tints-color-dark: #eb984e;
+
+// - Shades:
+$shade-color-light: #cf711f;
+$shade-color-dark: #45260a;
+
+// - Greys
+$grey-color-default: #555;
+$grey-color-light: #e3e3e3;
+$grey-color-dark: #767676;
+// - Light
+$light-color-white: #fff;
+// - Darks
+$dark-color-dark: #170d03;
+$dark-color-medium: #170d03;
+$dark-color-default: #2e1907;
+
+// - Font weights
+$font-weight-default: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+// - Max-width
+$max-width: 130rem;
+// - Line heights
+$line-height-default: 1;
+$line-height-small: 1.05;
+$line-height-medium: 1.2;
+$line-height-large: 1.8;
+
+// - Letter spacing
+$letter-space-small: -0.5px;
+$letter-space-default: 0.75px;
+$letter-space-big: 1.25px;
+
+// ---  BORDER-RADIUS
+$border-radius-default: 9px;
+$border-radius-medium: 11px;
+// Set text color based on background color
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return #333;
+  } @else {
+    @return $tints-color-light;
+  }
+}
+
+// Set background & text color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color(($color));
+}

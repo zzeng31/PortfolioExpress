@@ -1,0 +1,870 @@
+/*
+---  TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+---  SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+@import "config";
+@import "utilities.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: $line-height-default;
+  font-weight: 400;
+  color: $grey-color-default;
+}
+
+.background-img {
+  background: url("../img/intro.jpg") no-repeat center center/cover;
+}
+.background-light {
+  background-color: $tints-color-light;
+}
+.logo-container {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.section-container {
+  font-size: 2rem;
+
+  position: relative;
+  height: 100vh;
+}
+/**************************/
+/* General */
+/**************************/
+.light-overlay {
+  width: 100;
+  height: 100;
+  background-color: rgba(255, 227, 210, 0.2);
+}
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: $letter-space-big;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s ease-in;
+  &.btn-primary {
+    @include set-background($primary-color);
+
+    &:hover {
+      background-color: $shade-color-light;
+    }
+  }
+  &.btn-light {
+    @include set-background($light-color-white);
+    &:hover {
+      background-color: $tints-color-light;
+    }
+  }
+}
+.icon {
+  margin-right: 1rem;
+  color: $primary-color;
+}
+.round-icon {
+  border-radius: 50%;
+}
+.mobile-menu {
+  font-size: 3rem;
+  display: none;
+}
+.mobile-menu:hover {
+  cursor: pointer;
+}
+.box-shadow {
+  box-shadow: 0 0 2rem 0 rgba(205, 205, 205, 0.5);
+}
+.alert {
+  padding: 2rem 3rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .alert-close-btn {
+    font-size: 2.5rem;
+    &:hover {
+      color: $tints-color-light;
+      cursor: pointer;
+    }
+  }
+  &.alert-success {
+    @include set-background($success-color);
+  }
+  &.alert-error {
+    @include set-background($error-color);
+  }
+}
+.title-primary,
+.title-secondary {
+  font-weight: 700;
+
+  /* color: #45260a; */
+  /* color: #343a40; */
+  letter-spacing: -0.5px;
+}
+
+.title-primary {
+  font-size: 4rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.title-secondary {
+  font-size: 3.6rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.title-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.title-mini {
+  font-size: 2.4rem;
+  font-weight: $font-weight-medium;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.tag {
+  padding: 1rem;
+  border-radius: $border-radius-medium;
+  background-color: $primary-color;
+  color: $tints-color-light;
+}
+
+.post-author-avatar {
+  border-radius: 50%;
+  width: 10rem;
+}
+
+.post-title {
+  padding-top: 3rem;
+  font-size: 3.2rem;
+  font-weight: $font-weight-semi-bold;
+}
+
+.like-btn {
+  font-size: 2.4rem;
+  border: none;
+  border-radius: $border-radius-default;
+  width: 5rem;
+  padding: 0.5rem;
+  background-color: $tints-color-light;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  justify-content: center;
+  color: $primary-color;
+  transition: all 0.3s;
+}
+.like-btn:hover {
+  cursor: pointer;
+  background-color: $shade-color-light;
+  color: $light-color-white;
+}
+
+.new-post {
+  background-color: $light-color-white;
+  height: 40rem;
+  width: 120rem;
+  padding: 3rem;
+  border-radius: $border-radius-medium;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  .new-post-title {
+  }
+  .new-post-textarea {
+    font-size: 2.4rem;
+    border: 1px solid $grey-color-default;
+    padding: 1rem;
+    border-radius: $border-radius-medium;
+  }
+  .new-post-submit-btn {
+    width: 20rem;
+    align-self: flex-end;
+  }
+}
+
+/**************************/
+/* NAVIGATION */
+/**************************/
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: $tints-color-light;
+  opacity: 0.9;
+  justify-content: space-between;
+  padding: 3rem 4rem;
+  z-index: 1;
+  width: 100%;
+  border-bottom: solid 4px $primary-color;
+
+  top: 0;
+  .logo {
+    width: 30rem;
+  }
+  .navbar-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+    font-size: 2.1rem;
+  }
+  .navbar-link:link,
+  .navbar-link:visited {
+    text-decoration: none;
+    color: $primary-color;
+  }
+  .navbar-link:hover,
+  .navbar-link:active {
+    color: $shade-color-light;
+  }
+}
+/**************************/
+/* Landing SECTION */
+/**************************/
+
+.landing {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 15rem 3rem;
+  height: 100%;
+
+  .landing-text-box {
+    padding: 6rem 3rem;
+    text-align: center;
+    letter-spacing: $letter-space-small;
+    line-height: $line-height-medium;
+    .landing-title {
+      color: $shade-color-dark;
+      padding: 3rem;
+      font-size: 4.5rem;
+    }
+    .landing-intro {
+      font-size: 2.5rem;
+    }
+  }
+  .landing-btn-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .login-btn {
+      margin-right: 2rem;
+    }
+    .join-btn {
+    }
+  }
+}
+/**************************/
+/* Signup Form */
+/**************************/
+.form-container {
+  background-color: $light-color-white;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  padding: 10rem 5rem;
+  width: 50rem;
+
+  text-align: center;
+  flex-direction: column;
+  border-radius: $border-radius-default;
+  row-gap: 3rem;
+  transform: translate(-50%, 0);
+  .form-title {
+    font-weight: $font-weight-bold;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .form-input {
+    padding: 1rem 1.5rem;
+    height: 4.5rem;
+    border-radius: $border-radius-default;
+    border: solid 1px $grey-color-default;
+    font-size: 1.8rem;
+  }
+  .form-link-title {
+    font-size: 1.8rem;
+  }
+  .form-link {
+    margin-left: 0.7rem;
+  }
+  .form-link:link,
+  .form-link:visited {
+    text-decoration: none;
+    color: $primary-color;
+  }
+  .form-link:hover,
+  .form-link:active {
+    color: $shade-color-light;
+  }
+  .btn-form {
+    margin-top: 2rem;
+  }
+}
+
+/**************************/
+/* Developers */
+/**************************/
+
+.developer-title {
+  margin: 2rem 10rem;
+  display: flex;
+  align-items: center;
+}
+
+.developers-container {
+  padding: 2rem 10rem;
+  .developer {
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    background-color: $light-color-white;
+    width: 100%;
+    grid-gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    justify-content: center;
+    border-radius: $border-radius-default;
+
+    .developer-avatar {
+      width: 20rem;
+      border-radius: 50%;
+    }
+    .developer-info {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      line-height: $line-height-default;
+      .developer-name {
+      }
+      .developer-job {
+      }
+      .developer-location {
+      }
+      .developer-btn {
+        width: 20rem;
+      }
+    }
+    .developer-skill-list {
+      list-style: none;
+    }
+  }
+}
+
+/**************************/
+/* Profile */
+/**************************/
+.profile {
+  line-height: $line-height-large;
+
+  .profile-mini-title {
+    margin-right: 1rem;
+  }
+  .profile-top {
+    padding: 3rem;
+    margin: 5rem 25rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid $primary-color;
+    position: relative;
+    .profile-edit-btn {
+      position: absolute;
+      bottom: 0%;
+      right: 0%;
+    }
+    .profile-avatar {
+      width: 20rem;
+    }
+    .profile-top-info {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+      align-items: center;
+      justify-content: center;
+      .profile-name {
+        font-size: 3.2rem;
+      }
+      // .profile-job {
+      // }
+      .profile-location {
+      }
+      .profile-social {
+        display: flex;
+        gap: 1rem;
+        .social-icon {
+          font-size: 3.2rem;
+        }
+      }
+    }
+  }
+  .profile-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 2fr;
+    margin: 10rem 25rem;
+    row-gap: 3rem;
+    column-gap: 3rem;
+    .profile-bio-container {
+      padding: 3rem;
+      grid-column: 1/-1;
+      // .profile-bio-title {
+      // }
+      // .profile-bio {
+      // }
+    }
+    .profile-skill-container {
+      padding: 3rem;
+      grid-row: 2/3;
+      // .profile-skill-title {
+      //   .profile-skills {
+      //     .profile-skill-list {
+      //     }
+      //   }
+      // }
+    }
+    .profile-exp-container {
+      grid-column: 2/-1;
+      grid-row: 2/4;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      row-gap: 3rem;
+      // .profile-exp-title {
+      // }
+      // .profile-exp {
+      //   .profile-exp-company {
+      //   }
+      //   .profile-exp-work-date {
+      //   }
+      //   .profile-exp-position {
+      //   }
+      //   .profile-exp-description {
+      //   }
+      // }
+    }
+    .profile-edu-container {
+      grid-row: 3/4;
+      padding: 3rem;
+      .profile-edu-title {
+      }
+      // .profile-edu {
+      //   .profile-edu-school {
+      //   }
+      //   .profile-edu-time {
+      //   }
+      //   .profile-edu-degree {
+      //   }
+      //   .profile-edu-field {
+      //   }
+      //   .profile-edu-description {
+      //   }
+      // }
+    }
+    .profile-github-container {
+      grid-row: 4/5;
+      grid-column: 1/-1;
+      padding: 3rem;
+
+      .profile-github-title {
+        display: flex;
+        gap: 1rem;
+      }
+      .profile-github-repos {
+        .profile-github-repo {
+          display: inline-block;
+          margin-right: 1rem;
+          margin-bottom: 10rem;
+          width: 30rem;
+          height: 40rem;
+          max-height: 40rem;
+          padding: 2rem;
+          border-radius: $border-radius-default;
+          .profile-github-repo-title {
+            font-weight: $font-weight-bold;
+            text-decoration: none;
+            color: $primary-color;
+            font-size: 2.4rem;
+          }
+          .profile-github-repo-description {
+            padding: 1rem;
+            height: 18rem;
+            max-height: 18rem;
+          }
+          // .profile-github-repo-badge {
+          //   .profile-github-repo-badge-list {
+          //   }
+          // }
+        }
+      }
+    }
+  }
+}
+/**************************/
+/* Edit */
+/**************************/
+.edit-form-title {
+  text-align: center;
+}
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+  gap: 3rem;
+  .edit-form-container {
+    background-color: $light-color-white;
+    display: flex;
+
+    padding: 10rem 5rem;
+    width: 80rem;
+
+    flex-direction: column;
+    border-radius: $border-radius-default;
+    gap: 3rem;
+    align-items: flex-start;
+    .edit-form-title {
+      font-weight: $font-weight-bold;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+    .edit-form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+    .edit-input-textbox {
+      text-align: left;
+    }
+
+    .edit-form-input {
+      padding: 1rem 1.5rem;
+      height: 4.5rem;
+      width: 50rem;
+
+      border-radius: $border-radius-default;
+      border: solid 1px $grey-color-default;
+      font-size: 1.8rem;
+    }
+    .edit-form-date {
+      padding: 1rem 1.5rem;
+      height: 4.5rem;
+      width: 18rem;
+      border-radius: $border-radius-default;
+      border: solid 1px $grey-color-default;
+      font-size: 1.8rem;
+    }
+    .edit-form-link-title {
+      font-size: 1.8rem;
+    }
+    .edit-form-link {
+      margin-left: 0.7rem;
+    }
+    .edit-form-link:link,
+    .edit-form-link:visited {
+      text-decoration: none;
+      color: $primary-color;
+    }
+    .edit-form-link:hover,
+    .edit-form-link:active {
+      color: $shade-color-light;
+    }
+    .btn-edit-form {
+      margin-top: 2rem;
+    }
+    .edit-skills {
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .edit-social-icon {
+      font-size: 3rem;
+    }
+  }
+  .edit-btn-container {
+    display: flex;
+    gap: 2rem;
+    margin: 10rem 0;
+    .edit-apply-btn {
+    }
+    .edit-return-btn {
+    }
+  }
+}
+/**************************/
+/* Post */
+/**************************/
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+  .posts {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+    .post-card {
+      background-color: $light-color-white;
+      height: 40rem;
+      width: 120rem;
+      padding: 3rem;
+      border-radius: $border-radius-medium;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      .post-author {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        justify-content: flex-start;
+        color: $primary-color;
+        .post-card-author-avatar {
+          border-radius: 50%;
+          width: 10rem;
+        }
+        .post-card-author-name {
+        }
+      }
+
+      .post-card-title {
+        font-size: 2.4rem;
+        font-weight: $font-weight-semi-bold;
+      }
+      .post-card-content {
+        padding: 0 5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .post-card-title {
+        }
+        .post-card-text-content {
+        }
+      }
+      .post-card-btns {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3rem;
+        .post-card-like-btns {
+          display: flex;
+          gap: 3rem;
+        }
+      }
+    }
+  }
+
+  .new-post {
+    background-color: $light-color-white;
+    height: 40rem;
+    width: 120rem;
+    padding: 3rem;
+    border-radius: $border-radius-medium;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    .new-post-title {
+    }
+    .new-post-textarea {
+      font-size: 2.4rem;
+      border: 1px solid $grey-color-default;
+      padding: 1rem;
+      border-radius: $border-radius-medium;
+    }
+    .new-post-submit-btn {
+      width: 20rem;
+      align-self: flex-end;
+    }
+  }
+}
+/**************************/
+/* Comments */
+/**************************/
+.post-top {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid $grey-color-dark;
+  padding: 2rem;
+  gap: 3rem;
+  .post-top-author {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  .post-top-content {
+    padding: 2rem 10rem;
+  }
+  .post-top-btns {
+    padding: 2rem 10rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+  }
+}
+
+/**************************/
+/* Media Queries */
+/**************************/
+
+@media (max-width: 1320px) {
+  .mobile-menu {
+    display: inline-block;
+  }
+  .input {
+    width: 80vw !important;
+  }
+  .navbar {
+    .logo {
+      width: 15rem;
+    }
+    .navbar-list {
+      display: none;
+    }
+  }
+  .profile {
+    .profile-top {
+      margin: 5rem 5rem;
+      .profile-top-info {
+        padding-bottom: 10rem;
+      }
+    }
+    .profile-about {
+      display: flex;
+      flex-direction: column;
+      margin: 10rem 15rem;
+    }
+  }
+
+  .posts-container {
+    .posts {
+      .post-card {
+        width: 100vw;
+        padding: 1rem;
+        border-radius: 0;
+        .post-author {
+          padding: 1rem;
+          .post-card-author-avatar {
+            width: 8rem;
+          }
+        }
+      }
+    }
+    .new-post {
+      width: 100vw;
+    }
+  }
+  .edit-form {
+    .edit-form-container {
+      width: 100vw;
+      border-radius: 0;
+    }
+  }
+}
+@media (max-width: 685px) {
+  html {
+    font-size: 42.5%;
+  }
+  .mobile-menu {
+    display: inline-block;
+  }
+
+  .navbar {
+    .logo {
+      width: 15rem;
+    }
+    .navbar-list {
+      display: none;
+    }
+  }
+  .developer-title {
+    font-size: 2rem;
+  }
+
+  .developers-container {
+    font-size: 1rem;
+    padding: 0;
+    .developer {
+      .developer-avatar {
+        width: 5rem;
+      }
+      .developer-btn {
+        width: 10rem !important;
+        font-size: 6px;
+        padding: 1rem;
+      }
+    }
+  }
+  .profile-top {
+    .profile-top-info {
+      padding-bottom: 10rem;
+    }
+  }
+  .profile {
+    .profile-top {
+      margin: 0;
+    }
+    .profile-about {
+      display: flex;
+      flex-direction: column;
+      margin: 0rem 0;
+      gap: 1rem;
+    }
+  }
+  .posts-container {
+    .posts {
+      .post-card {
+        width: 100vw;
+
+        padding: 1rem;
+      }
+    }
+    .new-post {
+      width: 100vw;
+    }
+  }
+}

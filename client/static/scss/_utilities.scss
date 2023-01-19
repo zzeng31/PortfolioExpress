@@ -1,0 +1,17 @@
+.bg {
+  &-primary {
+    @include set-background($primary-color);
+  }
+  &-light {
+    @include set-background($tints-color-light);
+  }
+  &-dark {
+    @include set-background($shade-color-dark);
+  }
+  &-success {
+    @include set-background($success-color);
+  }
+  &-error {
+    @include set-background($error-color);
+  }
+}
