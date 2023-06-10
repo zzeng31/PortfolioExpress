@@ -46,6 +46,4 @@ cd client
 npm run build
 ```
 
-### About
 
-This is a MERN full stack project built from course: [Udemy](https://www.udemy.com/mern-stack-front-to-back/?couponCode=TRAVERSYMEDIA) with modified theme
